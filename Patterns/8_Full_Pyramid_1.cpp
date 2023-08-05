@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-    int i;
-    cin >> i;
+    int i = 9;
+    // cin >> i;
     for (int row = 0; row < i; row++)
     {
         for (int col = 0; col < i - (row + 1); col++)
