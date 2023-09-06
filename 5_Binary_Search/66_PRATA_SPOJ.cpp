@@ -11,7 +11,7 @@ bool isPossibleSolution(vector<int>cooksRanks,int nP, int mid){
         int timeTaken = 0;
 
         while(true){
-            if(timeTaken +j *R <=mid){
+            if(timeTaken + (j*R) <=mid){
                 currP++;
                 timeTaken = timeTaken + (j*R);
                 j++;
@@ -43,17 +43,25 @@ int minTimeToCompleteOrder(vector<int> cooksRanks, int nP){
             start = mid + 1;
         }
     }
+    return ans;
 }
 
 int main()
 {
-    int T; cin>>T;
+    int T;
+    cout<<"Enter the no. of test cases: "<<endl; 
+    cin>>T;
     while(T--){
         int nP, nC;
-        cin>> nP >> nC;
+        cout<<"Enter the no. of pratha: "<<endl;
+        cin >> nP;
+        cout<<"Enter the no. of cooks: "<<endl;
+        cin >> nC;
         vector<int> cooksRanks;
+        cout<<"Enter the ranks of all cooks: "<<endl;
         while(nC--){
-            int R; cin>>R;
+            int R;
+            cin>>R;
             cooksRanks.push_back(R);
         }
         cout<<"The number of minutes needed to get the order done is: "<<endl;
